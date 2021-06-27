@@ -1,0 +1,98 @@
+.userList {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding: 4rem 2rem 0;
+}
+
+.userList-container {
+	grid-column: 2/3;
+	justify-self: center;
+}
+
+.userList-heading {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.userList-details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.userList-details-heading {
+	width: 80vw;
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.userList-details-heading > p {
+	font-size: 1.4rem;
+	width: calc(100% / 7);
+	font-weight: 600;
+	margin: 0 0.6rem 0.4rem 0;
+	text-transform: capitalize;
+	text-align: center;
+	font-family: var(--font-normal);
+}
+
+.userList-details-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.userList-details-items {
+	width: 80vw;
+}
+
+.userList-details-item > p,
+.userList-details-item > button {
+	width: calc(100% / 7);
+	margin: 0 0.6rem 0.4rem 0;
+	text-align: center;
+}
+
+.userList-details-item > button {
+	outline: none;
+	border: none;
+	color: var(--dark-grey);
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+	background-color: white;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 65.125em) {
+	.userList-details-items {
+		width: 90vw;
+	}
+	.userList-details-heading {
+		width: 90vw;
+	}
+}
+
+@media only screen and (max-width: 45.625em) {
+	.userList-details-items {
+		width: 95vw;
+	}
+	.userList-details-heading {
+		width: 95vw;
+	}
+
+	.userList-details-item > p,
+	.userList-details-heading > p,
+	.userList-details-item > button {
+		margin: 0 0.2rem 0.4rem 0;
+		font-size: 1.2rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.userList {
+		padding: 4rem 1rem 0;
+	}
+}

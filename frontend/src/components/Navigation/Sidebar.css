@@ -1,0 +1,81 @@
+.sidebar {
+	background-color: var(--mid-grey);
+	height: 100vh;
+	width: 20rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+	position: absolute;
+	z-index: 300;
+	transition: all 0.5s ease-in;
+	top: 0;
+	left: 0;
+	display: none;
+	position: fixed;
+}
+
+@media only screen and (max-width: 37.5em) {
+	.sidebar {
+		display: block;
+	}
+}
+.sidebar li {
+	padding: 4rem 0 0 4rem;
+}
+
+.sidebar img {
+	width: 5rem;
+	margin: 5rem 4rem 0;
+	object-fit: contain;
+}
+
+.sidebar .nav-links {
+	list-style: none;
+	display: block;
+	margin-top: 4rem;
+}
+
+.sidebar .nav-links .links {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-family: var(--font-normal);
+	text-transform: uppercase;
+	color: var(--dark-grey);
+	transition: all 0.3s ease-in;
+}
+
+.sidebar .nav-links .links:hover,
+.sidebar .nav-links .links:active {
+	color: var(--light-blue);
+}
+
+.show-sidebar {
+	transform: translateX(0);
+}
+
+.close-sidebar {
+	transform: translateX(-105%);
+}
+
+.sidebar-close-button {
+	font-size: 2.2rem;
+	font-family: var(--font-normal);
+	position: absolute;
+	cursor: pointer;
+	right: 15%;
+	top: 1%;
+}
+
+@keyframes rotate {
+	10% {
+		transform: rotate(0deg);
+	}
+
+	90% {
+		transform: rotate(360deg);
+	}
+}
+.sidebar-close-button:active {
+	animation: rotate 1s ease-in;
+	animation-iteration-count: 3;
+	animation-fill-mode: forwards;
+}

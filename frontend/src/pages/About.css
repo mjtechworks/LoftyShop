@@ -1,0 +1,109 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;}
+  .about-heading {
+    position: relative;
+    height: 40vh;
+    margin-bottom: 7rem;}
+
+    .about-heading-image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0%;
+      right: 0%;
+      object-fit: cover;
+    }
+
+    .about-heading-1 {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+
+    .about-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;}
+
+    .about-details .heading {
+      max-width: 13rem;
+      margin-bottom: 4rem;
+    }
+    .about-details .content {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;}
+      @media only screen and (max-width: 40.625em) {
+        .about-details .content {
+        flex-direction: column;}
+      }
+      .about-details .content-img {
+        max-height: 26rem;
+        max-width: 26rem;
+        object-fit: cover;}
+        @media only screen and (max-width: 40.625em) {
+          .about-details .content-img {
+          margin-bottom: 4rem;
+        }
+      }
+      .about-details .content-text {
+        font-size: 1.5em;
+        line-height: 3rem;
+        font-family: var(--font-normal);
+        max-width: 40rem;
+        font-weight: 600;
+        color: var(--light-grey);
+        margin-left: 3rem;
+      }
+  
+      .about-mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;}
+    .about-mission .heading {
+      max-width: 13rem;
+      margin-bottom: 4rem;
+    }
+    .about-mission .content {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;}
+
+      @media only screen and (max-width: 40.625em) {
+        .about-mission .content {
+        flex-direction: column;}
+      }
+      .about-mission .content-img {
+        max-height: 26rem;
+        max-width: 26rem;
+        object-fit: cover;
+        margin-left: 3rem;}
+
+        @media only screen and (max-width: 40.625em) {
+          .about-mission .content-img {
+          order: -1;
+          margin-bottom: 4rem;
+        }
+      }
+      .about-mission .content-text {
+        font-size: 1.5em;
+        font-family: var(--font-normal);
+        max-width: 40rem;
+        line-height: 3rem;
+        font-weight: 600;
+        color: var(--light-grey);}
+        @media only screen and (max-width: 21.875em) {
+          .about-mission .content-text {
+          margin: 0 2rem;
+        }
+      }
+  

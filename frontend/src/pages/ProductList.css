@@ -1,0 +1,128 @@
+.productList {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding: 4rem 2rem 0;
+}
+
+.productList-container {
+	grid-column: 2/3;
+	justify-self: center;
+}
+
+.productList-heading {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.productList-details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.productList-details-heading {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.productList-details-heading > p {
+	font-size: 1.4rem;
+	width: calc(100% / 9);
+	font-weight: 600;
+	margin: 0 0.6rem 0.4rem 0;
+	text-transform: capitalize;
+	text-align: center;
+	font-family: var(--font-normal);
+}
+
+.productList-details-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.productList-details-items {
+	width: 80vw;
+}
+
+.productList-details-item > p,
+.productList-details-item > img,
+.productList-details-item > button {
+	width: calc(100% / 9);
+	margin: 0 0.6rem 0.4rem 0;
+	text-align: center;
+}
+
+.productList-details-item > button {
+	outline: none;
+	border: none;
+	color: black;
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+	background-color: white;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+.createProduct-button {
+	display: flex;
+	margin-top: 3rem;
+	width: 100%;
+	height: auto;
+	justify-content: right;
+}
+
+.productbutton1 {
+	font-size: 1.5rem;
+	width: auto;
+	height: auto;
+	padding: 0.4rem 0.6rem;
+	border: none;
+	outline: none;
+	font-weight: 500;
+	text-transform: capitalize;
+	position: relative;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 48em) {
+	.productList-details-item > p,
+	.productList-details-item > button,
+	.productList-details-heading > p {
+		width: calc(100% / 8);
+	}
+	.productList-details-item > img,
+	.productList-details-heading > p:nth-child(2) {
+		display: none;
+		width: 0;
+	}
+}
+
+@media only screen and (max-width: 39.625em) {
+	.productList {
+		padding: 2.5rem 1rem;
+	}
+
+	.productList-details-items {
+		width: 95vw;
+	}
+
+	.productList-details-items {
+		width: 90vw;
+	}
+	.productList-details-item > button {
+		font-size: 1.1rem;
+	}
+
+	.productList-details-item > p,
+	.productList-details-heading > p {
+		margin: 0 0.2rem 0.4rem 0;
+		font-size: 1.2rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}

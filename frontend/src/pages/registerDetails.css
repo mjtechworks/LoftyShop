@@ -1,0 +1,211 @@
+.register-menu {
+	background-color: var(--grey-blue);
+	padding: 4rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.register-heading {
+	margin-bottom: 4rem;
+}
+
+.register-breadcrumbs {
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: space-between;
+	width: 45%;
+}
+
+@media only screen and (max-width: 42.5em) {
+	.register-breadcrumbs {
+		width: 63%;
+	}
+}
+
+@media only screen and (max-width: 26.875em) {
+	.register-breadcrumbs {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 23.125em) {
+	.register-breadcrumbs {
+		width: 90%;
+	}
+}
+
+.breadcrumbs-link {
+	text-decoration: none;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	color: var(--dark-grey);
+	font-family: var(--font-heading);
+}
+
+.active-breadcrumbs {
+	color: var(--light-blue);
+}
+
+.register-input-container {
+	width: 45%;
+}
+@media only screen and (max-width: 42.5em) {
+	.register-input-container {
+		width: 63%;
+	}
+}
+
+@media only screen and (max-width: 26.875em) {
+	.register-input-container {
+		width: 80%;
+	}
+}
+
+.company-text {
+	font-size: 1.3rem;
+}
+
+.register-logo {
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.register-logo-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.register-logo-input {
+	display: none;
+}
+
+.register-logo-label {
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	color: var(--dark-blue);
+	margin-left: 1rem;
+	transform: translateY(-100%);
+	cursor: pointer;
+}
+
+.company-input {
+	width: 100%;
+}
+
+.company-name-input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.company-name-label {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+}
+
+.company-name-inputs {
+	border: none;
+	margin-bottom: 2rem;
+	width: 90%;
+}
+
+.vendor-button {
+	display: flex;
+	justify-content: space-between;
+}
+
+.vendor-button-1 {
+	width: 13rem;
+}
+
+.button-relative {
+	position: relative;
+}
+
+.image-previev {
+	position: relative;
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	margin-bottom: 3rem;
+}
+
+.cover {
+	position: absolute;
+	width: 77%;
+	height: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+
+.cover-image {
+	position: absolute;
+	left: 0;
+	height: 100%;
+	top: 0;
+	width: 100%;
+	border-radius: 100%;
+	background-color: white;
+	opacity: 0.5;
+}
+
+.contact-input-container {
+	width: 55%;
+	margin: 0 auto;
+}
+
+.business-mailing {
+	font-size: 1.3rem;
+	margin-top: 2.5rem;
+	margin-bottom: -0.5rem;
+	text-decoration: underline;
+}
+
+.contact-register {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+.contact-inputs-address {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-name-label {
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+}
+
+.contact-inputs {
+	display: grid;
+	grid-template-columns: repeat(auto-fiT, minmax(17rem, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0 0.5rem;
+}
+
+.contact-input-item {
+	width: 100%;
+	border: none;
+	height: 3rem;
+}
+
+.cover-1 {
+	position: absolute;
+	height: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	width: 100%;
+}

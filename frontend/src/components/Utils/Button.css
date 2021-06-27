@@ -1,0 +1,55 @@
+.button-link {
+	outline: none;
+	border: 1px solid;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	font-size: 1.8rem;
+	height: auto;
+	padding: 0.8rem 1.8rem;
+	width: auto;
+	border-radius: 5rem;
+	font-family: var(--font-normal);
+	font-weight: bold;
+	box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.8);
+}
+
+.button-link .button-icon {
+	margin-left: 0.5rem;
+}
+
+.button-link :active {
+	transform: translateY(-0.5rem);
+}
+
+.blue {
+	background-color: var(--light-blue);
+	border-color: var(--light-blue);
+	color: var(--white);
+}
+
+.red {
+	background-color: var(--red);
+	border-color: var(--red);
+	color: var(--white);
+}
+
+.button-icon2 {
+	margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 37.5em) {
+	.cart-button {
+		font-size: 1.3rem;
+		padding: 0.4rem 0.6rem;
+	}
+}
+
+@media screen and (max-width: 25em) {
+	.cart-button {
+		font-size: 1.3rem;
+		padding: 0.4rem 0.6rem;
+	}
+}

@@ -1,0 +1,122 @@
+.orderList {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding: 4rem 2rem 0;
+}
+
+.orderList-container {
+	grid-column: 2/3;
+	justify-self: center;
+}
+
+.orderList-heading {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.orderList-details {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.orderList-details-heading {
+	width: 100%;
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+}
+
+.orderList-details-heading > p {
+	font-size: 1.4rem;
+	width: calc(100% / 9);
+	font-weight: 600;
+	margin: 0 0.6rem 0.4rem 0;
+	text-transform: capitalize;
+	text-align: left;
+	font-family: var(--font-normal);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.orderList-details-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.orderList-details-items {
+	width: 90vw;
+}
+
+.orderList-details-item > p,
+.orderList-details-item > button {
+	width: calc(100% / 9);
+	margin: 0 0.6rem 0.2rem 0;
+	text-align: left;
+	font-size: 1.3rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.orderList-details-item > p:first-child,
+.orderList-details-heading > p:first-child {
+	flex: 1;
+}
+
+.orderList-details-item > button {
+	outline: none;
+	border: none;
+	color: black;
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+	background-color: white;
+	font-size: 1.3rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+@media only screen and (max-width: 48em) {
+	.orderList-details-item > p,
+	.orderList-details-item > button,
+	.orderList-details-heading > p {
+		width: calc(100% / 9);
+	}
+}
+
+@media only screen and (max-width: 39.625em) {
+	.orderList {
+		padding: 2.5rem 1rem;
+	}
+
+	.orderList-details-items {
+		width: 95vw;
+	}
+
+	.orderList-details-items {
+		width: 90vw;
+	}
+	.orderList-details-item > button {
+		font-size: 1.1rem;
+	}
+
+	.orderList-details-item > p,
+	.orderList-details-heading > p {
+		margin: 0 0.4rem 0.2rem 0;
+		font-size: 1rem;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+}
+
+@media only screen and (max-width: 30.375em) {
+	.orderList-details-item > p,
+	.orderList-details-item > button,
+	.orderList-details-heading > p {
+		width: calc(100% / 8);
+	}
+}

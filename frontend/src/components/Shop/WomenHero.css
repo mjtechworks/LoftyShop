@@ -1,0 +1,25 @@
+.women {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding-top: 5rem;
+	padding: 6rem 3rem 0;
+}
+.women-container {
+	grid-column: 2/3;
+}
+.women-container-heading {
+	margin-bottom: 17rem;
+}
+
+.women-container-heading .heading {
+	margin-bottom: 4rem;
+	text-align: center;
+}
+.women-container-heading .image {
+	height: 60vh;
+}
+.women-container-heading .image-s {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}

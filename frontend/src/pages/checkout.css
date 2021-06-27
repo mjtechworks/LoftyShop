@@ -1,0 +1,209 @@
+.checkout {
+	padding: 4rem;
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+}
+
+.checkout-container {
+	grid-column: 2/3;
+}
+
+.checkout-heading {
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+.checkout-summary {
+	margin-bottom: 5rem;
+}
+
+.checkout-subheading {
+	margin-bottom: 2rem;
+}
+
+.summary-heading,
+.summary-items {
+	display: flex;
+	justify-content: space-between;
+	max-width: 60rem;
+	margin-bottom: 1rem;
+}
+
+.summary-item {
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-family: var(--font-normal);
+}
+
+.summary-total {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: inherit;
+}
+
+.checkout-shipping {
+	margin-bottom: 5rem;
+}
+
+.checkout-address {
+	display: flex;
+	flex-direction: column;
+}
+
+.checkout-address > label,
+.payment-radio > label,
+.card-payment-details > label,
+.card-cvv > label,
+.card-year > p {
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+	font-weight: 500;
+	margin: 1rem 0 0.1rem;
+}
+
+.checkout-address > input,
+#card-holder,
+#card-number {
+	width: 25rem;
+	height: 2.5rem;
+	border-radius: 0.2rem;
+}
+
+#card-holder,
+#card-number {
+	margin-bottom: 1rem;
+}
+.payment-radio {
+	display: flex;
+	align-items: center;
+	max-width: 13rem;
+	margin-bottom: 1rem;
+}
+
+.payment-radio > label,
+.card-payment-details > label,
+.card-year > p {
+	margin: 0;
+	text-align: left;
+}
+
+.payment-radio > input,
+.card-payment-radio > input {
+	height: 2rem;
+	width: 2rem;
+	cursor: pointer;
+}
+
+.payment-details {
+	margin-top: 2rem;
+}
+
+.card-payment-radio {
+	display: flex;
+	align-items: center;
+	margin-left: 3rem;
+	margin-top: 1rem;
+}
+
+.card-payment-details {
+	margin: 2rem 3rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 17rem;
+}
+
+.card-final {
+	display: flex;
+	align-items: center;
+	width: 25rem;
+}
+
+.card-year {
+	flex: 0.75;
+}
+
+.expiration-date {
+	display: flex;
+	flex-direction: column;
+}
+
+.expiration-date-input {
+	display: flex;
+}
+
+#month {
+	width: 75%;
+}
+
+#year {
+	width: 25%;
+}
+
+.card-cvv {
+	flex: 0.25;
+}
+
+#cvv {
+	width: 100%;
+}
+
+.save-details {
+	width: 29rem;
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+#savePayment,
+#save {
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.save-details > label {
+	font-size: 1.2rem;
+	width: 100%;
+	font-weight: 600;
+}
+
+.checkout-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+
+.checkout-button {
+	outline: none;
+	border: none;
+	color: white;
+	min-width: 10rem;
+	text-transform: capitalize;
+	font-size: 1.3rem;
+	cursor: pointer;
+	width: auto;
+	padding: 0.3rem 0.6rem;
+}
+
+.min {
+	position: relative;
+}
+
+.paystack-button button {
+	outline: none;
+	border: none;
+	color: white;
+	background-color: white;
+	min-width: 10rem;
+	text-transform: capitalize;
+	font-size: 1.3rem;
+	cursor: pointer;
+	width: 200px;
+	padding: 0.3rem 0.6rem;
+	margin-bottom: 2rem;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,141 @@
+.shop {
+	display: grid;
+	padding-top: 4rem;
+	grid-template-columns: 1fr minmax(min-content, 117rem) 1fr;
+}
+.shop-container {
+	grid-column: 2/3;
+}
+.shop-heading {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.shop-heading-main {
+	margin-bottom: 3rem;
+}
+
+.shop-heading-image {
+	height: 50vh;
+	position: relative;
+	width: 100%;
+	margin-bottom: 5rem;
+}
+.shop-heading-image-item {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	object-fit: cover;
+}
+.shop-heading-image-main1 {
+	/* z-index: 1; */
+	position: absolute;
+	top: 25%;
+	right: 10%;
+}
+
+.shop-heading-image-main2 {
+	/* z-index: 1; */
+	position: absolute;
+	top: 40%;
+	right: 10%;
+}
+
+.shop-products {
+	display: grid;
+	grid-template-columns: 1fr 3.5fr;
+	justify-content: center;
+	margin-left: 2rem;
+}
+@media only screen and (max-width: 59em) {
+	.shop-products {
+		grid-template-columns: 1.5fr 3.5fr;
+	}
+}
+@media only screen and (max-width: 50em) {
+	.shop-products {
+		display: flex;
+		flex-direction: column;
+		margin: 0 3rem;
+	}
+}
+.shop-products-filter {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--dark-grey);
+	align-items: center;
+	max-height: 35rem;
+	margin-right: 2rem;
+	background-color: white;
+}
+
+@media only screen and (max-width: 50em) {
+	.shop-products-filter {
+		max-height: 40rem;
+		margin-bottom: 9rem;
+	}
+
+	.filter-button {
+		height: 4rem;
+		width: 60%;
+		align-self: center;
+		justify-self: center;
+	}
+}
+
+.shop-products-filter > * {
+	margin-bottom: 2rem;
+}
+
+.text {
+	margin-top: 2rem;
+}
+
+#gender,
+#category,
+#vendor,
+.filter-button,
+.ranges {
+	width: 90%;
+	padding: 0.4rem 0.5rem;
+	outline: none;
+	font-family: var(--font-normal);
+	text-transform: capitalize;
+}
+
+.filter-button {
+	background-color: var(--light-blue);
+	border: none;
+	border-radius: 4px;
+}
+
+@media only screen and (max-width: 50em) {
+	#gender,
+	#category,
+	#vendor,
+	.ranges {
+		width: 80%;
+	}
+}
+
+.rc-slider {
+	height: 20px !important;
+}
+
+.rc-slider-handle {
+	height: 20px !important;
+	width: 20px !important;
+}
+
+.rc-slider-rail,
+.rc-slider-track,
+.rc-slider-step {
+	height: 10px !important;
+}
+
+.range3 {
+	margin-bottom: 2rem;
+}

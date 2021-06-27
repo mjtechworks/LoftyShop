@@ -1,0 +1,33 @@
+.pagination {
+	width: 100%;
+	margin: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagination-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+	justify-content: center;
+	gap: 1.7rem;
+	margin: 0 auto;
+	width: 40%;
+}
+
+.pagination-button {
+	font-size: 1.5rem;
+	text-decoration: none;
+	padding: 0.7rem 1rem;
+	border: 1px solid var(--light-grey);
+	display: flex;
+	align-items: center;
+	color: var(--dark-grey);
+	justify-content: center;
+}
+
+.pagination-active {
+	background-color: var(--light-blue);
+	color: white;
+	border: none;
+}

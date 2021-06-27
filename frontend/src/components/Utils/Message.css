@@ -1,0 +1,27 @@
+.message {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: var(--dark-grey);
+	padding: 1rem;
+}
+
+.red-message {
+	background-color: #f8d7da;
+	color: #721c24;
+}
+
+.green-message {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.dark-message {
+	background-color: #e2e3e5;
+	color: #383d41;
+}
+
+.blue-message {
+	background-color: #cce5ff;
+	color: #004085;
+}

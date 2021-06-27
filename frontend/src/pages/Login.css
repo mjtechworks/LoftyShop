@@ -1,0 +1,103 @@
+.login-menu {
+	background-color: var(--grey-blue);
+	padding: 3rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-heading {
+	margin-bottom: 4rem;
+}
+
+.login-input-container {
+	background-color: #fff;
+	border: 1px solid var(--light-grey);
+	padding: 3rem 4rem;
+	min-width: 33rem;
+}
+
+.login-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-label {
+	font-size: 1.5rem;
+	font-family: var(--font-normal);
+}
+
+.login-inputs {
+	margin-bottom: 1.7rem;
+	width: 90%;
+	height: 3rem;
+}
+
+.login-button {
+	width: 50%;
+}
+
+.login-register {
+	margin-top: 4rem;
+	text-decoration: none;
+}
+.decoration {
+	text-decoration: none;
+}
+
+.relative {
+	position: relative;
+	max-height: 2rem;
+}
+
+.login-spinner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1rem;
+	height: 1rem;
+}
+
+.c-blue {
+	color: var(--light-blue);
+}
+
+.margin-2 {
+	margin-left: 1rem;
+}
+
+.register-vendor {
+	margin-bottom: 1.7rem;
+}
+
+.register-box {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.check-vendor {
+	font-size: 1.5rem;
+}
+
+.cover {
+	position: absolute;
+	width: 77%;
+	height: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+}
+.cover-1 {
+	position: absolute;
+	height: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	width: 100%;
+}
+
+.button-relative {
+	position: relative;
+}

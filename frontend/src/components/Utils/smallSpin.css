@@ -1,0 +1,22 @@
+.spinner {
+	position: absolute;
+	top: calc(50% - 1rem);
+	left: calc(50% - 1rem);
+	width: 2rem;
+	height: 2rem;
+	border: 0.25rem solid var(--dark-blue);
+	border-bottom: 0.25rem solid rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	z-index: 9999;
+}
+
+.spinner--hidden {
+	display: none;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

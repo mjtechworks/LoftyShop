@@ -1,0 +1,41 @@
+.services {
+	display: grid;
+	grid-template-columns: 1fr minmax(max-content, 114rem) 1fr;
+	column-gap: 2rem;
+	max-height: 80rem;
+	padding: 8rem 0;
+}
+
+@media only screen and (max-width: 25em) {
+	.services {
+		padding: 7rem 0;
+	}
+}
+
+.services-container {
+	grid-column: 2/3;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	justify-content: space-between;
+	gap: 3rem 0;
+}
+
+@media screen and (max-width: 28.75em) {
+	.services-container {
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	}
+}
+
+.services-container-item {
+	height: 100%;
+	width: 70%;
+	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.services-container-item-icon {
+	margin-left: 0.8rem;
+}

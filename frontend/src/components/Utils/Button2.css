@@ -1,0 +1,41 @@
+.button2 {
+	background-color: var(--white);
+	min-height: 1rem;
+	box-shadow: 0 0.3rem 0.6rem rgba(var(--black), 0.7);
+	border: 1px solid var(--dark-grey);
+	padding: 0.5rem 0rem;
+	min-width: 1rem;
+	color: var(--light-blue);
+	font-size: 1.3rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+}
+
+.black-button2 {
+	color: var(--white);
+	background-color: var(--light-blue);
+	border: 1px solid var(--light-blue);
+}
+
+.item-button2 {
+	color: var(--red);
+}
+
+.products-button:hover {
+	box-shadow: 0 0.3rem 0.6rem rgba(var(--black), 0.5);
+}
+
+.blue {
+	background-color: var(--light-blue);
+	border-color: var(--light-blue);
+	color: var(--white);
+}
+
+.red {
+	background-color: var(--red);
+	border-color: var(--red);
+	color: var(--white);
+}
