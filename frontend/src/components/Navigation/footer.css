@@ -1,0 +1,92 @@
+.footer {
+	background-color: var(--white);
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	margin-top: 3rem;
+	padding: 2.5rem;
+}
+
+.footer-container {
+	background-color: var(--light-white);
+	grid-column: 2/3;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	column-gap: 4rem;
+	row-gap: 4rem;
+	justify-items: left;
+	align-content: center;
+	text-align: left;
+}
+
+@media screen and (max-width: 25em) {
+	.footer_container {
+		text-align: center;
+		justify-items: center;
+	}
+}
+
+div h4 {
+	font-family: var(--font-heading);
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+
+div Link {
+	text-decoration: none;
+}
+
+div p,
+div p:link,
+div p:visited {
+	text-decoration: none;
+	font-family: var(--font-normal);
+	font-size: 1.5rem;
+	color: var(--black);
+	text-transform: capitalize;
+	transition: all 0.3s ease-in;
+}
+div .link:hover {
+	transform: translate(1.2rem);
+	color: var(--light-blue);
+}
+
+div .subscribe {
+	margin-bottom: 1.3rem;
+	font-family: var(--font-normal);
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--light-blue);
+}
+
+div .message {
+	font-size: 1.2rem;
+	font-family: var(--font-normal);
+	margin-bottom: 1.3rem;
+}
+
+div input {
+	height: 2.5rem;
+	width: 13rem;
+	border-radius: 3px;
+	border: 1px solid var(--dark-grey);
+	margin-right: 0.5rem;
+	padding-left: 0.5rem;
+	outline: none;
+}
+
+div input::placeholder {
+	font-family: inherit;
+	padding-left: 0.5rem;
+}
+
+div button {
+	height: 2.8rem;
+	text-transform: uppercase;
+	width: 10rem;
+	outline: none;
+	font-size: 1.2rem;
+	font-family: var(--font-normal);
+	border-radius: 3px;
+	color: var(--light-blue);
+	background-color: var(--black);
+}

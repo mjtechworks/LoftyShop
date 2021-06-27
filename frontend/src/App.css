@@ -1,0 +1,57 @@
+:root {
+	--light-blue: #88c8bc;
+	--dark-blue: #229e87;
+	--grey-white: #f8f9fa;
+	--pink: #f54291;
+	--dark-grey: #343a40;
+	--light-grey: #8c92a0;
+	--grey-blue: #d8d8d8;
+	--grey: #a9a9a9;
+	--white: #fff;
+	--red: #dc3545;
+	--black: rgb(10, 6, 6);
+	--mid-grey: #e6e6e6;
+
+	--font-heading: "Playfair Display";
+	--font-normal: "Nunito Sans";
+
+	--font-add: "Helvetica, sans-serif, Arial";
+	--font-weight: 100;
+}
+
+/* // fix sidebar, redesign sidebar navlink error handle,loading */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 50em) {
+	html {
+		font-size: 50%;
+	}
+}
+
+.app {
+	background-color: var(--grey-blue);
+}
+.body {
+	min-height: 50vh;
+}
+
+/* payment api */
+/* logo */

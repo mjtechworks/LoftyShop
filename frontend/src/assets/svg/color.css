@@ -1,0 +1,123 @@
+.heart-icon svg g g g g path {
+	fill: var(--red);
+}
+.heart-icon:hover > svg g g g g path {
+	fill: var(--light-blue);
+}
+
+.searchicon svg g g g g path {
+	fill: var(--white);
+}
+.searchicon:hover > svg g g g g path {
+	fill: var(--dark-grey);
+}
+.item-heart-icon svg {
+	height: 1.25rem;
+	width: 1.25rem;
+}
+
+.truck svg {
+	height: 8rem;
+	width: 8rem;
+}
+@media screen and (max-width: 28.75em) {
+	.truck svg {
+		height: 5.5rem;
+		width: 5.5rem;
+	}
+	.atm svg {
+		height: 5.5rem;
+		width: 5.5rem;
+	}
+	.headset svg {
+		height: 5.5rem;
+		width: 5.5rem;
+	}
+	.money svg {
+		height: 5.5rem;
+		width: 5.5rem;
+	}
+}
+.truck svg g g g g path {
+	fill: var(--dark-grey);
+}
+
+.atm svg {
+	height: 8rem;
+	width: 8rem;
+}
+
+.atm svg g g g g path {
+	fill: var(--dark-grey);
+}
+
+.headset svg {
+	height: 8rem;
+	width: 8rem;
+}
+
+.headset svg g g g g path {
+	fill: var(--dark-grey);
+}
+
+.money svg {
+	height: 8rem;
+	width: 8rem;
+}
+
+.money svg g g g g path {
+	fill: var(--dark-grey);
+}
+
+.shopping-cart svg {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.product-cart-icon svg {
+	height: 1rem;
+	width: 1rem;
+}
+.back-icon svg,
+.forward-icon svg {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.back-icon svg g g g g .color,
+.forward-icon svg g g g g .color {
+	fill: var(--white);
+}
+
+.shopping-cart-2 svg {
+	height: 20px;
+	width: 20px;
+}
+
+.nav-icon svg g g g g path {
+	fill: var(--dark-grey);
+}
+
+.full-star svg {
+	width: 2rem;
+	height: 2rem;
+}
+.half-star svg {
+	width: 2rem;
+	height: 2rem;
+}
+.empty-star svg {
+	width: 2rem;
+	height: 2rem;
+}
+
+.atm1 svg {
+	height: 20px;
+	width: 24px;
+}
+
+.marked,
+.cancel {
+	width: 20px;
+	height: 20px;
+}

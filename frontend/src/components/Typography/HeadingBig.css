@@ -1,0 +1,79 @@
+.big-heading {
+	font-size: 5rem;
+	font-family: var(--font-heading);
+	color: var(--dark-grey);
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.5rem;
+	line-height: 1;
+}
+
+@media only screen and (max-width: 25em) {
+	.big-heading {
+		font-size: 3.8rem;
+		letter-spacing: 0.3rem;
+	}
+	.about-underline-text {
+		font-size: 2rem;
+	}
+	.cart-font {
+		font-size: 2.5rem;
+	}
+	.shop-text {
+		font-size: 2.6rem;
+	}
+}
+
+@media only screen and (max-width: 18.125em) {
+	.big-heading {
+		font-size: 3rem;
+	}
+	.about-underline-text {
+		font-size: 1.6rem;
+	}
+	.cart-font {
+		font-size: 2rem;
+	}
+	.shop-text {
+		font-size: 1.9rem;
+	}
+}
+
+.about-underline-text {
+	font-size: 2.6rem;
+	font-family: var(--font-normal);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--light-grey);
+	letter-spacing: 0;
+}
+
+.cart-font {
+	font-size: 3.3rem;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--dark-grey);
+	letter-spacing: 0;
+}
+
+.shop-text {
+	font-size: 3.5rem;
+	font-family: var(--font-normal);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--light-grey);
+	letter-spacing: 0;
+}
+
+@media only screen and (max-width: 42.5em) {
+	.vendor-heading {
+		font-size: 3.8rem;
+	}
+}
+
+@media only screen and (max-width: 28.875em) {
+	.vendor-heading {
+		font-size: 2.8rem;
+	}
+}

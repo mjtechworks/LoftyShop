@@ -1,0 +1,58 @@
+.headingMid {
+	font-size: 2.6rem;
+	font-family: var(--font-heading);
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--dark-blue);
+	letter-spacing: 0;
+}
+
+@media only screen and (max-width: 25em) {
+	.headingMid {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 18.125em) {
+	.headingMid {
+		font-size: 1.6rem;
+	}
+}
+
+.font-cart {
+	font-size: 2rem;
+}
+
+@media screen and (max-width: 37.5em) {
+	.font-cart {
+		font-size: 1.5rem;
+	}
+}
+
+.black {
+	color: var(--dark-grey);
+}
+
+.light-grey {
+	color: var(--light-grey);
+	font-family: var(--font-normal);
+	font-weight: bold;
+}
+
+.font {
+	font-family: var(--font-normal);
+	font-size: 2rem;
+}
+
+.font-normal {
+	font-family: var(--font-normal);
+	font-weight: 700;
+}
+
+.services-font {
+	font-size: 2rem;
+}
+
+.dark {
+	color: var(--dark-blue);
+}

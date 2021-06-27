@@ -1,0 +1,114 @@
+.productEdit {
+	padding: 4rem 2rem 0;
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+}
+
+.productEdit-container {
+	grid-column: 2/3;
+}
+
+.productEdit-heading {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.productEdit-inputs {
+	width: 65vw;
+}
+
+.productEdit-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.productEdit-input label {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+	font-weight: 500;
+	margin-bottom: 0.3rem;
+}
+
+.productEdit-input input,
+.productEdit-input select,
+.productEdit-input textarea {
+	border: none;
+	border-radius: 5px;
+	font-family: var(--font-normal);
+	margin-bottom: 1.5rem;
+	width: 100%;
+	padding: 0.3rem;
+}
+
+.productEdit-input input,
+.productEdit-input select {
+	height: 2.5rem;
+}
+
+.productEdit-input select {
+	text-transform: capitalize;
+}
+
+.images-Preview {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin: 2rem 0;
+	overflow: hidden;
+}
+
+.images-Preview-container {
+	height: 30rem;
+	width: 20rem;
+	max-height: 30rem;
+	max-width: 20rem;
+}
+
+.images-preview-sub {
+	position: relative;
+}
+
+.images-preview-sub img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.images-Preview input {
+	display: none;
+}
+
+.images-Preview label {
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	margin-left: 2rem;
+	cursor: pointer;
+	transform: translateY(-5rem);
+}
+
+.productEdit-buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: 3rem 2rem 3rem 0;
+}
+
+.productEdit-button {
+	width: auto;
+	height: auto;
+	padding: 0.6rem 0.9rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.cover-image1 {
+	position: absolute;
+	left: 0;
+	height: 100%;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	opacity: 0.5;
+}

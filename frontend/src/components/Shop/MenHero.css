@@ -1,0 +1,25 @@
+.men {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding-top: 5rem;
+	padding: 6rem 3rem 0;
+}
+.men-container {
+	grid-column: 2/3;
+}
+.men-container-heading {
+	margin-bottom: 17rem;
+}
+
+.men-container-heading .heading {
+	margin-bottom: 4rem;
+	text-align: center;
+}
+.men-container-heading .image {
+	height: 60vh;
+}
+.men-container-heading .image-s {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}

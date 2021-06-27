@@ -1,0 +1,59 @@
+.Profile {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, 114rem) 1fr;
+	padding: 4rem 2rem 0;
+}
+
+.Profile-container {
+	grid-column: 2/3;
+}
+
+.Profile-heading {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+.Profile-details {
+	margin-bottom: 4rem;
+}
+
+.Profile-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.Profile-checkbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.Profile-input > input {
+	width: 70%;
+	height: 2.5rem;
+	margin-bottom: 1rem;
+	border: none;
+	font-family: var(--font-normal);
+}
+
+.Profile-input > label {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+	font-family: var(--font-normal);
+}
+
+.Profile-checkbox > label {
+	font-size: 1.5rem;
+	margin-left: 0.3rem;
+	text-transform: capitalize;
+	font-family: var(--font-normal);
+}
+
+#passwordChange {
+	width: auto;
+}
+
+.Profile-update-button {
+	max-width: 13rem;
+}

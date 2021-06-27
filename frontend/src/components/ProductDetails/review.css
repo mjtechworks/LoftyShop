@@ -1,0 +1,55 @@
+.review {
+	margin: 9rem 3rem;
+}
+
+.review-details {
+	margin: 2rem;
+}
+
+.review-star {
+	margin: 0.5rem 0;
+}
+
+.review-time {
+	font-size: 1rem;
+	color: var(--light-grey);
+}
+
+.user-comment {
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.write-review {
+	margin: 4rem 0;
+}
+.write-review-heading {
+	margin-bottom: 1rem;
+}
+
+.write-review-input {
+	display: flex;
+	flex-direction: column;
+}
+
+.review-label {
+	font-size: 1.3rem;
+	font-family: var(--font-normal);
+	font-weight: 500;
+	text-transform: capitalize;
+	margin: 2rem 0 0;
+}
+
+.review-input {
+	height: 2.5rem;
+	max-width: 26rem;
+	border: none;
+}
+
+.review-input1 {
+	width: 26rem;
+	border: none;
+	margin-bottom: 2rem;
+	font-family: inherit;
+}
