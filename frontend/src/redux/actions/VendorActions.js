@@ -19,7 +19,7 @@ export const vendorRegister = (contactInfo) => async (dispatch, getState) => {
 		const { vendorDetails, companyDetails, socialMedia } = getState().vendor
 
 		const { data } = await axios.post(
-			"http://localhost:5000/api/vendor/register",
+			"/api/vendor/register",
 			{ vendorDetails, companyDetails, socialMedia, contactInfo },
 			config
 		)

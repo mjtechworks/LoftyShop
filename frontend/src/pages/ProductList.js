@@ -83,14 +83,7 @@ const ProductList = () => {
 												className="productList-details-item"
 											>
 												<p>{product.name}</p>
-												<img
-													src={
-														product.image.startsWith("/uploads")
-															? `http://localhost:5000${product.image}`
-															: product.image
-													}
-													alt={product.name}
-												/>
+												<img src={product.image} alt={product.name} />
 												<p>{product.vendor.companyName}</p>
 												<p id="pcategory">{product.category}</p>
 												<p>{`$${product.price}.00`}</p>

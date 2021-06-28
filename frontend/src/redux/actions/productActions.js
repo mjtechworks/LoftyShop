@@ -43,7 +43,7 @@ export const homeFeaturedItems = () => async (dispatch) => {
 	try {
 		dispatch({ type: HOME_FEATURED_PRODUCT_REQUEST })
 
-		const { data } = await axios.get("http://localhost:5000/api/product/featured/home")
+		const { data } = await axios.get("/api/product/featured/home")
 
 		dispatch({ type: HOME_FEATURED_PRODUCT_SUCCESS, payload: data })
 	} catch (err) {
@@ -59,7 +59,7 @@ export const getOptions = () => async (dispatch) => {
 	try {
 		dispatch({ type: OPTIONS_REQUEST })
 
-		const { data } = await axios.get("http://localhost:5000/api/product/options")
+		const { data } = await axios.get("/api/product/options")
 
 		dispatch({ type: OPTIONS_SUCCESS, payload: data })
 	} catch (error) {
@@ -77,7 +77,7 @@ export const getProducts = (something) => async (dispatch) => {
 	try {
 		dispatch({ type: SHOP_PRODUCT_REQUEST })
 
-		const { data } = await axios.get(`http://localhost:5000/api/product/shop?${something}`)
+		const { data } = await axios.get(`/api/product/shop?${something}`)
 
 		dispatch({ type: SHOP_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
@@ -96,7 +96,7 @@ export const searchProducts = (word) => async (dispatch) => {
 	try {
 		dispatch({ type: SEARCH_PRODUCT_REQUEST })
 
-		const { data } = await axios.get(`http://localhost:5000/api/product/search?word=${word}`)
+		const { data } = await axios.get(`/api/product/search?word=${word}`)
 
 		dispatch({ type: SEARCH_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
@@ -116,7 +116,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 	try {
 		const {
 			data: { product },
-		} = await axios.get(`http://localhost:5000/api/product/${id}`)
+		} = await axios.get(`/api/product/${id}`)
 
 		dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: product })
 	} catch (error) {
@@ -135,7 +135,7 @@ export const getRelatedProducts = (category, gender, id) => async (dispatch) => 
 		dispatch({ type: RELATED_PRODUCTS_REQUEST })
 
 		const { data } = await axios.get(
-			`http://localhost:5000/api/product/related/products?category=${category}&gender=${gender}&id=${id}`
+			`/api/product/related/products?category=${category}&gender=${gender}&id=${id}`
 		)
 
 		dispatch({ type: RELATED_PRODUCTS_SUCCESS, payload: data })
@@ -161,7 +161,7 @@ export const getAllProducts = (currentPage = 1) => async (dispatch, getState) =>
 		}
 
 		const { data } = await axios.get(
-			`http://localhost:5000/api/product/all/products?currentPage=${currentPage}`,
+			`/api/product/all/products?currentPage=${currentPage}`,
 			config
 		)
 
@@ -193,7 +193,7 @@ export const getVendorAllProducts = (currentPage = 1) => async (dispatch, getSta
 		}
 
 		const { data } = await axios.get(
-			`http://localhost:5000/api/product/all/vendor/products?currentPage=${currentPage}`,
+			`/api/product/all/vendor/products?currentPage=${currentPage}`,
 			config
 		)
 
@@ -225,7 +225,7 @@ export const createComment = (id, rating, comment) => async (dispatch, getState)
 
 		const review = { rating, comment }
 
-		await axios.put(`http://localhost:5000/api/product/${id}`, review, config)
+		await axios.put(`/api/product/${id}`, review, config)
 		dispatch({ type: CREATE_COMMENT_SUCCESS })
 	} catch (error) {
 		const err =
@@ -252,7 +252,7 @@ export const createProduct = () => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.post(`http://localhost:5000/api/product/`, {}, config)
+		const { data } = await axios.post(`/api/product/`, {}, config)
 
 		dispatch({ type: CREATE_PRODUCT_SUCCESS, payload: data })
 		console.log(data)
@@ -282,7 +282,7 @@ export const getVendorProductDetails = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get(`http://localhost:5000/api/product/?id=${id}`, config)
+		const { data } = await axios.get(`/api/product/?id=${id}`, config)
 		console.log(data)
 
 		dispatch({ type: GET_VENDOR_PRODUCT_SUCCESS, payload: data })
@@ -317,11 +317,7 @@ export const updateProductDetails = (details, id) => async (dispatch, getState) 
 			},
 		}
 
-		const { data } = await axios.post(
-			`http://localhost:5000/api/product/${id}`,
-			details,
-			config
-		)
+		const { data } = await axios.post(`/api/product/${id}`, details, config)
 		console.log(data)
 
 		dispatch({ type: UPDATE_PRODUCT_SUCCESS, payload: data })
@@ -355,7 +351,7 @@ export const deleteProductDetails = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.delete(`http://localhost:5000/api/product/${id}`, config)
+		const { data } = await axios.delete(`/api/product/${id}`, config)
 		console.log(data)
 
 		dispatch({ type: DELETE_PRODUCT_SUCCESS, payload: data })

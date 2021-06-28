@@ -63,15 +63,7 @@ function ProductDetails({ match }) {
 				) : (
 					<>
 						<div className="product-item-details">
-							<img
-								src={
-									product.image.startsWith("/uploads")
-										? `http://localhost:5000${product.image}`
-										: product.image
-								}
-								alt="product-item"
-								className="details-image"
-							/>
+							<img src={product.image} alt="product-item" className="details-image" />
 							<div className="details-item">
 								<div className="details-item-text">
 									<HeadingMid color="dark">{product.name}</HeadingMid>

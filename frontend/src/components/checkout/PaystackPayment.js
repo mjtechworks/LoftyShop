@@ -12,7 +12,7 @@ const PaystackPayment = ({ order, payNow }) => {
 	const key = useRef("")
 	useEffect(() => {
 		const data = async () => {
-			const { data: id } = await axios.get("http://localhost:5000/api/config/paystack")
+			const { data: id } = await axios.get("/api/config/paystack")
 			key.current = id
 			setStack(true)
 		}

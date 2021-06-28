@@ -37,11 +37,7 @@ export const createOrder = (details) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.post(
-			"http://localhost:5000/api/order/save/order",
-			details,
-			config
-		)
+		const { data } = await axios.post("/api/order/save/order", details, config)
 
 		dispatch({ type: CREATE_ORDER_SUCCESS, payload: data })
 		localStorage.removeItem("cartItems")
@@ -71,7 +67,7 @@ export const getOrder = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get(`http://localhost:5000/api/order/${id}`, config)
+		const { data } = await axios.get(`/api/order/${id}`, config)
 
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })
 		console.log(data)
@@ -102,10 +98,7 @@ export const getOrders = (currentPage = 1) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get(
-			`http://localhost:5000/api/order/all/orders?currentPage=${currentPage}`,
-			config
-		)
+		const { data } = await axios.get(`/api/order/all/orders?currentPage=${currentPage}`, config)
 
 		dispatch({ type: GET_ALL_ORDERS_SUCCESS, payload: data })
 		console.log(data)
@@ -137,7 +130,7 @@ export const getOrdersAdmin = (currentPage = 1) => async (dispatch, getState) =>
 		}
 
 		const { data } = await axios.get(
-			`http://localhost:5000/api/order/all/admin/orders?currentPage=${currentPage}`,
+			`/api/order/all/admin/orders?currentPage=${currentPage}`,
 			config
 		)
 
@@ -173,7 +166,7 @@ export const markAsPaid = (id, details) => async (dispatch, getState) => {
 
 		console.log(id)
 
-		const { data } = await axios.post(`http://localhost:5000/api/order/${id}`, details, config)
+		const { data } = await axios.post(`/api/order/${id}`, details, config)
 
 		dispatch({ type: MARK_PAID_SUCCESS, payload: data })
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })
@@ -208,7 +201,7 @@ export const markAsDelivered = (id) => async (dispatch, getState) => {
 
 		console.log(id)
 
-		const { data } = await axios.put(`http://localhost:5000/api/order/${id}`, {}, config)
+		const { data } = await axios.put(`/api/order/${id}`, {}, config)
 
 		dispatch({ type: MARK_PAID_SUCCESS, payload: data })
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })

@@ -49,15 +49,7 @@ const Cart = () => {
 						return (
 							<div className="cart-product" key={item.id}>
 								<div className="cart-product-1">
-									<img
-										src={
-											item.image.startsWith("/uploads")
-												? `http://localhost:5000${item.image}`
-												: item.image
-										}
-										alt="product"
-										className="cart-image"
-									/>
+									<img src={item.image} alt="product" className="cart-image" />
 									<div className="name">
 										<HeadingMid color="font black font-cart">
 											{item.name}

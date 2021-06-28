@@ -88,7 +88,7 @@ const ProductEdit = () => {
 
 		changeImageLoading(true)
 		try {
-			const { data } = await axios.post("http://localhost:5000/api/upload/", formData, config)
+			const { data } = await axios.post("/api/upload/", formData, config)
 
 			changeImage(data)
 		} catch (error) {
@@ -132,15 +132,7 @@ const ProductEdit = () => {
 					<div className="images-Preview">
 						<div className="images-Preview-container">
 							<div className="images-preview-sub">
-								<img
-									src={
-										image.startsWith("/uploads")
-											? `http://localhost:5000${image}`
-											: image
-									}
-									alt=""
-									id="image"
-								/>
+								<img src={image} alt="" id="image" />
 								{imageLoading && (
 									<div className="cover-image1">
 										<SmallSpin />

@@ -5,10 +5,10 @@
 
 .underline::after {
 	position: absolute;
-	width: 50%;
+	width: 40%;
 	height: 2px;
 	bottom: -10%;
-	right: 0;
+	right: 30%;
 	background-color: var(--pink);
 	content: "";
 }
