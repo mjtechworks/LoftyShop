@@ -92,7 +92,7 @@ const Register = ({ location, history }) => {
 
 	const checkEmail = async () => {
 		try {
-			await axios.get(`http://localhost:5000/api/vendor/register/email/${email}`)
+			await axios.get(`/api/vendor/register/email/${email}`)
 			return true
 		} catch (err) {
 			const message =

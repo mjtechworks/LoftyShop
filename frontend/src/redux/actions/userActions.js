@@ -43,11 +43,7 @@ export const userLogin = (email, password) => async (dispatch) => {
 			},
 		}
 
-		const { data } = await axios.post(
-			"http://localhost:5000/api/user/login",
-			{ email, password },
-			config
-		)
+		const { data } = await axios.post("/api/user/login", { email, password }, config)
 
 		dispatch({ type: USER_LOGIN_SUCCESS, payload: data })
 
@@ -74,7 +70,7 @@ export const userRegister = (name, email, password, isAdmin = false) => async (d
 		}
 
 		const { data } = await axios.post(
-			"http://localhost:5000/api/user/register",
+			"/api/user/register",
 			{ email, password, name, isAdmin },
 			config
 		)
@@ -121,10 +117,7 @@ export const getAllUsers = (currentPage = 1) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get(
-			`http://localhost:5000/api/user/all/users?currentPage=${currentPage}`,
-			config
-		)
+		const { data } = await axios.get(`/api/user/all/users?currentPage=${currentPage}`, config)
 
 		dispatch({ type: GET_ALL_USERS_SUCCESS, payload: data })
 
@@ -155,7 +148,7 @@ export const getSingleUser = () => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get("http://localhost:5000/api/user/single/user", config)
+		const { data } = await axios.get("/api/user/single/user", config)
 
 		dispatch({ type: GET_SINGLE_USER_SUCCESS, payload: data })
 	} catch (error) {
@@ -184,7 +177,7 @@ export const editSingleUser = (fields) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.put("http://localhost:5000/api/user/register", fields, config)
+		const { data } = await axios.put("/api/user/register", fields, config)
 		console.log(data)
 
 		dispatch({ type: EDIT_SINGLE_USER_SUCCESS, payload: data.message })
@@ -218,10 +211,7 @@ export const getSingleUserAdmin = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.get(
-			`http://localhost:5000/api/user/admin/user?id=${id}`,
-			config
-		)
+		const { data } = await axios.get(`/api/user/admin/user?id=${id}`, config)
 
 		dispatch({ type: GET_SINGLE_USER_ADMIN_SUCCESS, payload: data })
 	} catch (error) {
@@ -249,10 +239,7 @@ export const deleteSingleUser = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.delete(
-			`http://localhost:5000/api/user/register?id=${id}`,
-			config
-		)
+		const { data } = await axios.delete(`/api/user/register?id=${id}`, config)
 		console.log(data)
 
 		dispatch({ type: DELETE_SINGLE_USER_SUCCESS })

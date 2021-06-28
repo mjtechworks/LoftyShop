@@ -77,7 +77,7 @@ const Profile = () => {
 			return true
 		} else {
 			try {
-				await axios.get(`http://localhost:5000/api/vendor/register/email/${email}`)
+				await axios.get(`/api/vendor/register/email/${email}`)
 				return true
 			} catch (err) {
 				const message =
@@ -117,13 +117,9 @@ const Profile = () => {
 		}
 		changeImageloading(true)
 		try {
-			const { data } = await axios.post(
-				"http://localhost:5000/api/upload/register",
-				formData,
-				config
-			)
+			const { data } = await axios.post("/api/upload/register", formData, config)
 			changeImageloading(false)
-			changeImage(`http://localhost:5000${data}`)
+			changeImage(`${data}`)
 		} catch (error) {
 			changeImageloading(false)
 			if (error) {
@@ -146,7 +142,7 @@ const Profile = () => {
 			return true
 		} else {
 			try {
-				await axios.get(`http://localhost:5000/api/vendor/register/company/${companyName}`)
+				await axios.get(`/api/vendor/register/company/${companyName}`)
 				return true
 			} catch (err) {
 				const message =
