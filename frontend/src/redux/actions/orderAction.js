@@ -47,7 +47,6 @@ export const createOrder = (details) => async (dispatch, getState) => {
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -70,14 +69,11 @@ export const getOrder = (id) => async (dispatch, getState) => {
 		const { data } = await axios.get(`/api/order/${id}`, config)
 
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -101,14 +97,11 @@ export const getOrders = (currentPage = 1) => async (dispatch, getState) => {
 		const { data } = await axios.get(`/api/order/all/orders?currentPage=${currentPage}`, config)
 
 		dispatch({ type: GET_ALL_ORDERS_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -135,14 +128,11 @@ export const getOrdersAdmin = (currentPage = 1) => async (dispatch, getState) =>
 		)
 
 		dispatch({ type: GET_ALL_ORDERS_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -164,20 +154,15 @@ export const markAsPaid = (id, details) => async (dispatch, getState) => {
 			},
 		}
 
-		console.log(id)
-
 		const { data } = await axios.post(`/api/order/${id}`, details, config)
 
 		dispatch({ type: MARK_PAID_SUCCESS, payload: data })
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -199,20 +184,15 @@ export const markAsDelivered = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		console.log(id)
-
 		const { data } = await axios.put(`/api/order/${id}`, {}, config)
 
 		dispatch({ type: MARK_PAID_SUCCESS, payload: data })
 		dispatch({ type: GET_ORDER_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())

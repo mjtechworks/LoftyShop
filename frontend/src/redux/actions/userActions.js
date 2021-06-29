@@ -74,7 +74,6 @@ export const userRegister = (name, email, password, isAdmin = false) => async (d
 			{ email, password, name, isAdmin },
 			config
 		)
-		console.log(data)
 
 		dispatch({ type: USER_REGISTER_SUCCESS, payload: data })
 		dispatch({ type: USER_LOGIN_SUCCESS, payload: data })
@@ -85,7 +84,7 @@ export const userRegister = (name, email, password, isAdmin = false) => async (d
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-		console.log(message)
+
 		dispatch({
 			type: USER_REGISTER_FAIL,
 			payload: message,
@@ -120,8 +119,6 @@ export const getAllUsers = (currentPage = 1) => async (dispatch, getState) => {
 		const { data } = await axios.get(`/api/user/all/users?currentPage=${currentPage}`, config)
 
 		dispatch({ type: GET_ALL_USERS_SUCCESS, payload: data })
-
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
@@ -133,7 +130,6 @@ export const getAllUsers = (currentPage = 1) => async (dispatch, getState) => {
 		} else {
 			dispatch({ type: GET_ALL_USERS_FAIL, payload: err })
 		}
-		console.log(err)
 	}
 }
 
@@ -178,7 +174,6 @@ export const editSingleUser = (fields) => async (dispatch, getState) => {
 		}
 
 		const { data } = await axios.put("/api/user/register", fields, config)
-		console.log(data)
 
 		dispatch({ type: EDIT_SINGLE_USER_SUCCESS, payload: data.message })
 		dispatch({ type: USER_LOGIN_SUCCESS, payload: { ...data.updatedUser, token: user.token } })
@@ -189,8 +184,6 @@ export const editSingleUser = (fields) => async (dispatch, getState) => {
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -239,8 +232,7 @@ export const deleteSingleUser = (id) => async (dispatch, getState) => {
 			},
 		}
 
-		const { data } = await axios.delete(`/api/user/register?id=${id}`, config)
-		console.log(data)
+		await axios.delete(`/api/user/register?id=${id}`, config)
 
 		dispatch({ type: DELETE_SINGLE_USER_SUCCESS })
 	} catch (error) {
@@ -249,7 +241,6 @@ export const deleteSingleUser = (id) => async (dispatch, getState) => {
 				? error.response.data.message
 				: error.message
 
-		console.log(err)
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
 		} else {

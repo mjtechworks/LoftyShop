@@ -131,7 +131,7 @@ const ProductList = () => {
 					user.isVendor && (
 						<div className="createProduct-button">
 							<button
-								className="blue productbutton1"
+								className="blue productbutton1 button-relative"
 								onClick={() => dispatch(createProduct())}
 							>
 								create product

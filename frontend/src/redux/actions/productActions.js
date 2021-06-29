@@ -81,7 +81,6 @@ export const getProducts = (something) => async (dispatch) => {
 
 		dispatch({ type: SHOP_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
-		console.log()
 		dispatch({
 			type: SHOP_PRODUCT_FAIL,
 			payload:
@@ -100,7 +99,6 @@ export const searchProducts = (word) => async (dispatch) => {
 
 		dispatch({ type: SEARCH_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
-		console.log()
 		dispatch({
 			type: SEARCH_PRODUCT_FAIL,
 			payload:
@@ -172,7 +170,6 @@ export const getAllProducts = (currentPage = 1) => async (dispatch, getState) =>
 				? error.response.data.message
 				: error.message
 
-		console.log(err)
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
 		}
@@ -204,7 +201,6 @@ export const getVendorAllProducts = (currentPage = 1) => async (dispatch, getSta
 				? error.response.data.message
 				: error.message
 
-		console.log(err)
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
 		}
@@ -236,7 +232,7 @@ export const createComment = (id, rating, comment) => async (dispatch, getState)
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
 		}
-		console.log(err)
+
 		dispatch({ type: CREATE_COMMENT_FAIL, payload: err })
 	}
 }
@@ -255,7 +251,6 @@ export const createProduct = () => async (dispatch, getState) => {
 		const { data } = await axios.post(`/api/product/`, {}, config)
 
 		dispatch({ type: CREATE_PRODUCT_SUCCESS, payload: data })
-		console.log(data)
 	} catch (error) {
 		const err =
 			error.response && error.response.data.message
@@ -265,7 +260,7 @@ export const createProduct = () => async (dispatch, getState) => {
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
 		}
-		console.log(err)
+
 		dispatch({ type: CREATE_PRODUCT_FAIL, payload: err })
 	}
 }
@@ -283,7 +278,6 @@ export const getVendorProductDetails = (id) => async (dispatch, getState) => {
 		}
 
 		const { data } = await axios.get(`/api/product/?id=${id}`, config)
-		console.log(data)
 
 		dispatch({ type: GET_VENDOR_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
@@ -291,8 +285,6 @@ export const getVendorProductDetails = (id) => async (dispatch, getState) => {
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -318,7 +310,6 @@ export const updateProductDetails = (details, id) => async (dispatch, getState) 
 		}
 
 		const { data } = await axios.post(`/api/product/${id}`, details, config)
-		console.log(data)
 
 		dispatch({ type: UPDATE_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
@@ -326,8 +317,6 @@ export const updateProductDetails = (details, id) => async (dispatch, getState) 
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
@@ -352,7 +341,6 @@ export const deleteProductDetails = (id) => async (dispatch, getState) => {
 		}
 
 		const { data } = await axios.delete(`/api/product/${id}`, config)
-		console.log(data)
 
 		dispatch({ type: DELETE_PRODUCT_SUCCESS, payload: data })
 	} catch (error) {
@@ -360,8 +348,6 @@ export const deleteProductDetails = (id) => async (dispatch, getState) => {
 			error.response && error.response.data.message
 				? error.response.data.message
 				: error.message
-
-		console.log(err)
 
 		if (err === "Not authorized, token failed") {
 			dispatch(userLogout())
