@@ -25,6 +25,7 @@ import {
 	DELETE_SINGLE_USER_SUCCESS,
 	DELETE_SINGLE_USER_FAIL,
 	EDIT_SINGLE_USER_CLEAR,
+	DELETE_SINGLE_USER_CLEAR,
 } from "../constants/userConstants"
 
 export const loginReducer = (state = {}, action) => {
@@ -155,6 +156,8 @@ export const deleteUserReducer = (state = {}, action) => {
 			return { loading: false, result: "success" }
 		case DELETE_SINGLE_USER_FAIL:
 			return { loading: false, error: action.payload }
+		case DELETE_SINGLE_USER_CLEAR:
+			return {}
 
 		default:
 			return state

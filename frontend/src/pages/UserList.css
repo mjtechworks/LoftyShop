@@ -53,6 +53,9 @@
 	width: calc(100% / 7);
 	margin: 0 0.6rem 0.4rem 0;
 	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .userList-details-item > button {
@@ -88,9 +91,6 @@
 	.userList-details-item > button {
 		margin: 0 0.2rem 0.4rem 0;
 		font-size: 1.2rem;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		overflow: hidden;
 	}
 	.userList {
 		padding: 4rem 1rem 0;

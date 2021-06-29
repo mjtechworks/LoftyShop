@@ -37,7 +37,7 @@ const vendorRegister = asyncHandler(async (req, res) => {
 		_id: newUser._id,
 		name: newUser.name,
 		email: newUser.email,
-		isVendor: newUser.isvendor,
+		isVendor: newUser.isVendor,
 		vendor: newUser.vendor,
 		isAdmin: newUser.isAdmin,
 		token: generateToken(newUser._id),
