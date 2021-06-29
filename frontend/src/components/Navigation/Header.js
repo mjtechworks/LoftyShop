@@ -210,7 +210,7 @@ const Header = ({ toggle, sidebarHandle }) => {
 													Orders
 												</NavLink>
 											)}
-											{(userInfo || userInfo.isVendor) && (
+											{(userInfo.isAdmin || userInfo.isVendor) && (
 												<NavLink
 													to="/vendor/products"
 													activeClassName="active-link"
