@@ -8,7 +8,7 @@ import HeadingMid from "../components/Typography/HeadingMid"
 import HeadingSmall from "../components/Typography/HeadingSmall"
 import Spinner from "../components/Utils/Spin"
 import { getSingleUserAdmin, deleteSingleUser } from "../redux/actions/userActions"
-import { DELETE_SINGLE_USER_CLEAR } from "../redux/constants/userConstants"
+import { DELETE_SINGLE_USER_CLEAR, CLEAR_SINGLE_USER_ADMIN } from "../redux/constants/userConstants"
 import SmallSpin from "../components/Utils/SmallSpin"
 
 const UserDetails = () => {
@@ -17,7 +17,9 @@ const UserDetails = () => {
 
 	const { user } = useSelector((state) => state.user)
 	const { user: adminUser, loading, error } = useSelector((state) => state.getSingleUserAdmin)
-	const { result, deleteLoading, deleteError } = useSelector((state) => state.deleteUser)
+	const { result, loading: deleteLoading, error: deleteError } = useSelector(
+		(state) => state.deleteUser
+	)
 
 	const dispatch = useDispatch()
 
@@ -25,14 +27,17 @@ const UserDetails = () => {
 		if (!user || !user.isAdmin) {
 			history.push("/login")
 		} else {
-			if (result) {
+			if (result === "success") {
 				dispatch({ type: DELETE_SINGLE_USER_CLEAR })
+				dispatch({ type: CLEAR_SINGLE_USER_ADMIN })
 				history.push("/admin/users")
 			} else {
 				dispatch(getSingleUserAdmin(match.params.id))
 			}
 		}
 	}, [dispatch, match, history, user, result])
+
+	console.log(result)
 
 	return loading ? (
 		<Spinner />

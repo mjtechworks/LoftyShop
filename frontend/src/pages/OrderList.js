@@ -38,7 +38,11 @@ const OrderList = () => {
 			<div className="orderList-container">
 				<div className="orderList-heading">
 					<HeadingBig>
-						{orders?.length === 0 ? "pls order something" : "orders list"}
+						{orders?.length === 0
+							? user.isAdmin || user.isVendor
+								? "No order available"
+								: "pls order something"
+							: "orders list"}
 					</HeadingBig>
 				</div>
 				{loading ? (

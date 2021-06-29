@@ -58,6 +58,9 @@ const Header = ({ toggle, sidebarHandle }) => {
 		}
 	}
 
+	// console.log(userInfo.isVendor)
+	// console.log(userInfo)
+
 	const goTo = (id, gender) => {
 		searchInputChange("")
 		focusedChange(false)
@@ -207,7 +210,7 @@ const Header = ({ toggle, sidebarHandle }) => {
 													Orders
 												</NavLink>
 											)}
-											{(userInfo.isAdmin || userInfo.isVendor) && (
+											{(userInfo || userInfo.isVendor) && (
 												<NavLink
 													to="/vendor/products"
 													activeClassName="active-link"

@@ -21,6 +21,7 @@ const userLogin = asyncHandler(async (req, res) => {
 			isVendor: user.isVendor,
 			vendor: user.vendor,
 			isAdmin: user.isAdmin,
+			isVendor: user.isVendor,
 			token: generateToken(user._id),
 		})
 	} else {
@@ -164,15 +165,19 @@ const deleteAUserAdmin = asyncHandler(async (req, res) => {
 		res.status(404)
 		throw new Error("User does not exist")
 	} else {
-		if (user.isVendor) {
-			const vendor = await Vendor.deleteMany({ _id: user.vendor })
-			await Product.deleteMany({ vendor: user.vendor })
-			await Order.deleteMany({ user: user._id })
+		if (req.user._id.toString() === id.toString()) {
+			throw new Error("You cannot delete yourself")
+		} else {
+			if (user.isVendor) {
+				const vendor = await Vendor.deleteMany({ _id: user.vendor })
+				await Product.deleteMany({ vendor: user.vendor })
+				await Order.deleteMany({ user: user._id })
+			}
+
+			await user.remove()
+
+			res.status(200).json({ message: "done" })
 		}
-
-		await user.remove()
-
-		res.status(200).json({ message: "done" })
 	}
 })
 

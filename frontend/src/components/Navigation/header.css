@@ -211,14 +211,15 @@ li:not(:last-child) {
 }
 
 .login-login {
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	color: var(--dark-grey);
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-left: 0.3rem;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.6rem;
 	cursor: pointer;
+	font-family: var(--font-normal);
 }
 
 .fixed {
