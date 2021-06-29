@@ -112,6 +112,10 @@
 	border-radius: 4px;
 }
 
+option [value="category"] {
+	position: relative;
+}
+
 @media only screen and (max-width: 50em) {
 	#gender,
 	#category,

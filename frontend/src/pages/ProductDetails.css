@@ -188,3 +188,13 @@
 	max-width: 60rem;
 	align-self: center;
 }
+
+.cover-1 {
+	position: absolute;
+	height: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	opacity: 0.5;
+	width: 100%;
+}
