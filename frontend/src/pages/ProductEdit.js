@@ -245,7 +245,10 @@ const ProductEdit = () => {
 				)}
 				<div className="productEdit-buttons">
 					{user.isVendor && (
-						<button className="productEdit-button blue" onClick={saveProduct}>
+						<button
+							className="productEdit-button blue button-relative"
+							onClick={saveProduct}
+						>
 							save product{" "}
 							{updateLoading && (
 								<div className="cover-1 ">
@@ -255,7 +258,7 @@ const ProductEdit = () => {
 						</button>
 					)}
 					<button
-						className="productEdit-button red"
+						className="productEdit-button red button-relative"
 						onClick={() => dispatch(deleteProductDetails(product._id))}
 					>
 						delete product{" "}

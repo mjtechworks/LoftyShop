@@ -58,9 +58,6 @@ const Header = ({ toggle, sidebarHandle }) => {
 		}
 	}
 
-	// console.log(userInfo.isVendor)
-	// console.log(userInfo)
-
 	const goTo = (id, gender) => {
 		searchInputChange("")
 		focusedChange(false)

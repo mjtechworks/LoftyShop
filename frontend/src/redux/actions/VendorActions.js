@@ -37,6 +37,5 @@ export const vendorRegister = (contactInfo) => async (dispatch, getState) => {
 			type: VENDOR_REGISTER_FAIL,
 			payload: message,
 		})
-		console.log(message)
 	}
 }

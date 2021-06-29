@@ -37,8 +37,6 @@ const UserDetails = () => {
 		}
 	}, [dispatch, match, history, user, result])
 
-	console.log(result)
-
 	return loading ? (
 		<Spinner />
 	) : error ? (
@@ -148,7 +146,7 @@ const UserDetails = () => {
 				)}
 				{deleteError && <Message color="red-message">{deleteError}</Message>}
 				<button
-					className="checkout-button red"
+					className="checkout-button red button-relative"
 					onClick={() => dispatch(deleteSingleUser(adminUser._id))}
 				>
 					delete user
