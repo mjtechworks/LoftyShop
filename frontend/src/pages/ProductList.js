@@ -60,81 +60,88 @@ const ProductList = () => {
 					<Spinner />
 				) : error ? (
 					<Message color="red-message">{error}</Message>
-				) : (
-					products.products.length > 0 && (
-						<>
-							<div className="productList-details">
-								<div className="productList-details-heading">
-									<p>name</p>
-									<p>image</p>
-									<p>vendor</p>
-									<p>category</p>
-									<p>price</p>
-									<p>gender</p>
-									<p>count in stock</p>
-									<p>discount</p>
-									<p></p>
-								</div>
-								<div className="productList-details-items">
-									{products.products.map((product) => {
-										return (
-											<div
-												key={product._id}
-												className="productList-details-item"
-											>
-												<p>{product.name}</p>
-												<img src={product.image} alt={product.name} />
-												<p>{product.vendor.companyName}</p>
-												<p id="pcategory">{product.category}</p>
-												<p>{`$${product.price}.00`}</p>
-												<p>{product.gender}</p>
-												<p>
-													{product.countInStock
-														? product.countInStock
-														: "-"}
-												</p>
-												<p>
-													{product.discount
-														? `$${product.discount}.00`
-														: "-"}
-												</p>
-												<button
-													onClick={() =>
-														history.push(
-															`/vendor/products/edit/${product._id}`
-														)
-													}
-												>
-													details
-												</button>
-											</div>
-										)
-									})}
-								</div>
+				) : products.products.length > 0 ? (
+					<>
+						<div className="productList-details">
+							<div className="productList-details-heading">
+								<p>name</p>
+								<p>image</p>
+								<p>vendor</p>
+								<p>category</p>
+								<p>price</p>
+								<p>gender</p>
+								<p>count in stock</p>
+								<p>discount</p>
+								<p></p>
 							</div>
-							{createError && <Message color="red-message">{createError}</Message>}
-							{user.isVendor && (
-								<div className="createProduct-button">
-									<button
-										className="blue productbutton1"
-										onClick={() => dispatch(createProduct())}
-									>
-										create product
-										{createLoading && (
-											<div className="cover-1 ">
-												<SmallSpin />
-											</div>
-										)}
-									</button>
-								</div>
-							)}
-							{+products.totalPages > 1 && (
-								<Pagination
-									pages={products.totalPages}
-									currentPage={products.currentPage}
-								/>
-							)}
-						</>
+							<div className="productList-details-items">
+								{products.products.map((product) => {
+									return (
+										<div key={product._id} className="productList-details-item">
+											<p>{product.name}</p>
+											<img src={product.image} alt={product.name} />
+											<p>{product.vendor.companyName}</p>
+											<p id="pcategory">{product.category}</p>
+											<p>{`$${product.price}.00`}</p>
+											<p>{product.gender}</p>
+											<p>
+												{product.countInStock ? product.countInStock : "-"}
+											</p>
+											<p>
+												{product.discount ? `$${product.discount}.00` : "-"}
+											</p>
+											<button
+												onClick={() =>
+													history.push(
+														`/vendor/products/edit/${product._id}`
+													)
+												}
+											>
+												details
+											</button>
+										</div>
+									)
+								})}
+							</div>
+						</div>
+						{createError && <Message color="red-message">{createError}</Message>}
+						{user.isVendor && (
+							<div className="createProduct-button">
+								<button
+									className="blue productbutton1"
+									onClick={() => dispatch(createProduct())}
+								>
+									create product
+									{createLoading && (
+										<div className="cover-1 ">
+											<SmallSpin />
+										</div>
+									)}
+								</button>
+							</div>
+						)}
+						{+products.totalPages > 1 && (
+							<Pagination
+								pages={products.totalPages}
+								currentPage={products.currentPage}
+							/>
+						)}
+					</>
+				) : (
+					user.isVendor && (
+						<div className="createProduct-button">
+							<button
+								className="blue productbutton1"
+								onClick={() => dispatch(createProduct())}
+							>
+								create product
+								{createLoading && (
+									<div className="cover-1 ">
+										<SmallSpin />
+									</div>
+								)}
+							</button>
+						</div>
 					)
 				)}
 			</div>
